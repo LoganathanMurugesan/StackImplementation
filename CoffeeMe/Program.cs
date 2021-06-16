@@ -6,7 +6,21 @@ namespace CoffeeMe
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            double sum = 0.0;
+            var simpleStack = new SimpleStack();
+            simpleStack.Push(8.7);
+            simpleStack.Push(3.4);
+            simpleStack.Push(6.2);
+
+            while(simpleStack.Count > 0)
+            {
+                var item = simpleStack.Pop();
+                Console.WriteLine($"Item: {item}");
+                sum += item;
+            }
+
+            Console.WriteLine($"Sum: {sum}");
+            Console.ReadLine();
         }
     }
 }
